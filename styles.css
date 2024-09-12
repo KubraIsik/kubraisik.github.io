@@ -1,27 +1,217 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #b5c2b8;
     margin: 0;
     padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background-color: #333;
+    background-color: #004d40;
+    color: white;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.step-container {
+    align-items: center;
+    position: relative;
+}
+
+
+/* Container for diagonal arrows */
+.arrow-container {
+    position: relative; /* Position relative for the arrows */
+    bottom: -10px; /* Position arrows near the bottom of the step */
+    left: 50%; /* Center the arrows horizontally */
+    transform: translateX(-50%); /* Center the arrows */
+    width: 100%; /* Full width of the step container */
+    height: 40px; /* Height to fit the arrows */
+    display: flex; /* Use flexbox for positioning */
+    justify-content: space-between; /* Distribute arrows evenly */
+}
+
+/* Style for diagonal arrows */
+.arrow-diagonal {
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Left diagonal arrow */
+.arrow-diagonal.left {
+    border-width: 15px 30px 15px 0;
+    border-color: transparent #333 transparent transparent;
+    transform: rotate(-45deg); /* Rotate to get diagonal effect */
+}
+
+
+/* Right diagonal arrow */
+.arrow-diagonal.right {
+    border-width: 15px 0 15px 30px;
+    border-color: transparent transparent transparent #333;
+    transform: rotate(45deg); /* Rotate to get diagonal effect */
+}
+
+.step {
+    position: relative;
+    background-color: #00796b;
     color: white;
     padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 250px;
     text-align: center;
 }
 
-section {
-    margin: 20px;
+.step:hover {
+    transform: scale(1.05);
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
+/* Style for step number */
+.step-number {
+    position: absolute; /* Absolute positioning to place it in the top-right corner */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    background-color: #a5d0bc; /* Background color for the step number */
+    color: white; /* White text color */
+    padding: 5px 10px; /* Padding around the number */
+    border-radius: 50%; /* Make it a circle */
+    font-size: 16px; /* Font size of the step number */
+    font-weight: bold; /* Make the number bold */
+}
+
+/* Style for sub-steps */
+.sub-steps {
+    padding-left: 0; /* No indentation for sub-steps */
+    position: relative; /* Position relative to place sub-steps */
+    width: 100%; /* Full width of the step container */
+    text-align: center; /* Center align sub-steps */
+}
+
+/* Style for each sub-step */
+.step-sub {
+    background-color: #e0e0e0; /* Slightly darker background for sub-steps */
+    border: 1px solid #ccc; /* Border around the sub-steps */
+    padding: 1px; /* Padding inside the sub-steps */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below each sub-step */
+    width: 200px; /* Fixed width for sub-steps */
+    display: inline-block; /* Inline-block to align horizontally */
+}
+
+.step-sub:hover {
+    transform: scale(1.024);
+}
+
+
+.arrow-down {
+    font-size: 32px;
+    color: #00796b;
+    font-weight: bold;
+    
+}
+/* Left diagonal arrow */
+.arrow-down.left {
+    border-width: 15px 30px 15px 0;
+    border-color: transparent #333 transparent transparent;
+    transform: rotate(-45deg); /* Rotate to get diagonal effect */
+}
+/* Right diagonal arrow */
+.arrow-down.right {
+    border-width: 15px 0 15px 30px;
+    border-color: transparent transparent transparent #333;
+    transform: rotate(45deg); /* Rotate to get diagonal effect */
+}
+
+.popup {
+    display: none;
     position: fixed;
-    bottom: 0;
+    z-index: 1;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: black;
+    font-size: 24px;
+    cursor: pointer; /* Indicates that the button is clickable */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.close:hover {
+    color: red; /* Change color on hover for better visibility */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #004d40; /* Dark background for contrast */
+    color: white; /* White text for readability */
+    padding: 20px 0; /* Add padding for spacing */
+    text-align: center; /* Center-align text */
+    position: relative; /* Position relative for any potential absolute positioning inside */
+    bottom: 0; /* Ensure it stays at the bottom */
+    width: 100%; /* Full width */
+    margin-top: auto; /* Pushes footer to the bottom of the page if content is short */
+}
+
+footer p {
+    margin: 10px 0; /* Add some vertical margin to paragraphs */
+}
+
+footer a {
+    color: #00bcd4; /* Light blue color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make links bold */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Optional: Social Media Links */
+.social-links {
+    margin-top: 10px; /* Margin for spacing above */
+}
+
+.social-links a {
+    margin: 0 10px; /* Space out social media links */
+    color: #00bcd4; /* Light blue color for links */
+    font-size: 18px; /* Slightly larger font size for social media links */
+}
+
+.social-links a:hover {
+    color: #fff; /* Change color on hover */
 }

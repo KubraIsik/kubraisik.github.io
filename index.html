@@ -3,27 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Career Roadmap</title>
+    <title>Interactive Career Roadmap</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Career Roadmap</h1>
+        <h1>My Career Roadmap</h1>
     </header>
 
-    <section>
-        <h2>Roadmap to Specializing in Automation Testing</h2>
-        <ul>
-            <li>2023: Manual Testing</li>
-            <li>2024: Python, Selenium, API Testing</li>
-            <li>2025: Advanced Automation Tools (CI/CD)</li>
-            <li>2026: Performance Testing</li>
-            <li>2027: Test Architect</li>
-        </ul>
+    <section class="roadmap">
+        <!-- Main Branch -->
+        <div class="step-container">
+            <div class="step" onclick="showPopup('step1')">
+                <span class="step-number">1</span>
+                <p>Testing Fundamentals</p>
+            </div>
+            <div class="arrow-down">&darr;</div>
+            
+        </div>
+        <!-- Diagonal Arrows -->
+            <!--<div class="arrow-container">
+                
+                <div class="arrow-diagonal left"></div>
+                <div class="arrow-diagonal right"></div>-->
+                <!-- Left diagonal arrow -->
+                 <!-- Right diagonal arrow -->
+            <!--</div> -->
+            
+            <!-- Sub-steps -->
+            <!--<div class="sub-steps">
+            
+                <div class="step-sub" onclick="showPopup('step1.1')">
+                    <p>Sub-step 1</p>
+                </div>
+            
+                <div class="step-sub" onclick="showPopup('step1.2')">
+                    <p>Sub-step 2</p>
+                </div>
+            </div> -->
+
+        <!-- Continue with the rest of the roadmap -->
+        <div class="step-container">
+            <div class="step" onclick="showPopup('step2')">
+                <span class="step-number">2</span>
+                <p>ISQTB Standards</p>
+            </div>
+            <div class="arrow-down">&darr;</div>
+        </div>
+
+        <div class="step-container">
+            <div class="step" onclick="showPopup('step3')">
+                <span class="step-number">3</span>
+                <p>Project Management Tools</p>
+            </div>
+            <div class="arrow-down">&darr;</div>
+        </div>
+
+        <div class="step-container">
+            <div class="step" onclick="showPopup('step4')">
+                <span class="step-number">4</span>
+                <p>Programming Languages</p>
+            </div>
+            <div class="arrow-down">&darr;</div>
+        </div>
+
+        <div class="step-container">
+            <div class="step" onclick="showPopup('step5')">
+                <span class="step-number">5</span>
+                <p>Automation Tools</p>
+            </div>
+            <div class="arrow-down">&darr;</div>
+        </div>
+
+        <div class="step-container"></div>
+            <div class="step" onclick="showPopup('')">
+                <span class="step-number">6</span>
+                <p>...</p>
+            </div>
+        </div>
     </section>
 
+    <!-- Pop-up Windows -->
+    <div class="popup" id="step1">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('step1')">&times;</span>
+            <h2>Step 1: Testing Fundamentals</h2>
+            <p>This step involves learning the basics of software testing, understanding testing methodologies, and working on manual testing tasks.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="step1.1">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('step1.1')">&times;</span>
+            <h2>Step 1.1: Introduction to Manual Testing</h2>
+            <p>This sub-step covers the fundamentals of manual testing, including test case creation and execution.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="step1.2">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('step1.2')">&times;</span>
+            <h2>Step 1.2: Advanced Manual Testing Techniques</h2>
+            <p>This sub-step dives into advanced topics such as exploratory testing, test management, and defect tracking.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="step2">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('step2')">&times;</span>
+            <h2>Step 2: ISQTB Standards</h2>
+            <p>Become an expert in ISQTB Standards.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="step3">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('step3')">&times;</span>
+            <h2>Step 3: Test Project Management Tools</h2>
+            <p>Agile management tools  like Jira, Xray and learnin to integrate CI/CD pipelines.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="step4">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('step4')">&times;</span>
+            <h2>Step 4: Programming Languages</h2>
+            <p> Html, CSS, Javascript, Python(Pytest), Java within frameworks and methodologies. e.g. POM, Cucumber, BDD...</p>
+        </div>
+    </div>
+
+    <div class="popup" id="step5">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('step5')">&times;</span>
+            <h2>Step 5: Automation Tools</h2>
+            <p>Selenium, TestNg, Playwright, Cypress...</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 My Career Roadmap</p>
+        <p>&copy; 2024 My Career Roadmap. All Rights Reserved.</p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/kubranazlihanisik/">LinkedIn</a> | <a href="https://github.com/KubraIsik">GitHub</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

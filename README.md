@@ -1,1 +1,1 @@
-![](https://github.com/KubraIsik/kubraisik.github.io/tree/main/gif)
+![](https://github.com/KubraIsik/kubraisik.github.io/blob/main/inprogress-growth.gif)
